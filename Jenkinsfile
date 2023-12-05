@@ -24,7 +24,8 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://15.164.242.47:8080/')], contextPath: null, war: 'path/to/war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://15.164.242.47:8080/')], contextPath: null, war: 'target/hello-world.war
+'
       }
     }
   }
