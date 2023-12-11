@@ -5,7 +5,7 @@
   - name: Create & Start Container
     docker_container:
       name: myweb
-      image: "myhello:{{ lookup('env','BUILD_NUMBER') }}"
+      image: "springis21/myhello:{{ lookup('env','BUILD_NUMBER') }}"
       state: started
       ports:
       - "80:8080"
