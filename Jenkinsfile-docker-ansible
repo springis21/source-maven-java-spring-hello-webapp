@@ -49,7 +49,7 @@ stage('Publish Docker Image') {
     stage('Run Docker Container') {
       agent {
         docker { 
-          image 'ghcr.io/c1t1d0s7/jenkins-ansible-agent'
+          image 'c1t1d0s7/jenkins-ansible-agent'
           args '-u 0:0 -e DOCKER_HOST=tcp://172.31.28.41:2375'
         }
       }
